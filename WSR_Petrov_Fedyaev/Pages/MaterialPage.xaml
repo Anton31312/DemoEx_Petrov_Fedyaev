@@ -30,10 +30,9 @@
                               Width="150"
                               Margin="20 10 0 0"/>
                 </StackPanel>
-                
+
                 <ListView x:Name="listMaterial"
                          Background="Transparent"
-                         Width="650"
                          BorderBrush="Transparent">
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -52,6 +51,7 @@
                                     </Grid.RowDefinitions>
                                 </Grid>
 
+                                <!--Column First-->
                                 <TextBlock x:Name="PathImage" 
                                            Visibility="Hidden"
                                            Text="{Binding Image}"
@@ -63,34 +63,38 @@
                                        Grid.Column="0"
                                        Grid.RowSpan="2"/>
 
-                                <TextBlock Text="{Binding TypeMaterial.NameTypeMaterial, StringFormat='{} | {}'}"
+                                <!--Column Second-->
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding TypeMaterial.NameTypeMaterial, StringFormat='{} | {}'}"
                                            x:Name="txtNameTypeMaterial"
                                             Style="{DynamicResource StyleListView}"
                                             Grid.Column="1"/>
 
-                                <TextBlock Text="{Binding NameMaterial}"
+                                    <TextBlock Text="{Binding NameMaterial}"
                                            x:Name="txtNameMaterial"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"/>
+                                </StackPanel>
+                                
 
                                 <TextBlock Text="{Binding MinQty, StringFormat='{} Минимальное количество: {0}'}"
                                            x:Name="txtMinQty"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
-                                           Grid.Row="1"/>
+                                           Grid.Row="2"/>
                                 <TextBlock Text="{Binding Unit.NameUnit}"
                                            x:Name="txtUnit"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
-                                           Grid.Row="1"/>
+                                           Grid.Row="2"/>
 
                                 <TextBlock Text="{Binding Suppliers, StringFormat='{} Поставщики: {}'}" 
                                            x:Name="txtSupplier"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
-                                           Grid.Row="2"/>
+                                           Grid.Row="3"/>
 
-
+                                <!--Column Third-->
                                 <TextBlock Text="{Binding Qty, StringFormat='{} Остаток: {0}'}"
                                            x:Name="txtQty"
                                            Style="{DynamicResource StyleListView}"
@@ -105,15 +109,15 @@
 
                                 <Button x:Name="btnEdit"
                                         Content="Редактировать"
-                                        Height="20"
+                                        Height="15"
                                         Width="100"
                                         Grid.Column="2"
-                                        Grid.Row="2"/>
+                                        Grid.Row="2"
+                                        HorizontalAlignment="Right"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
             </StackPanel>
         </ScrollViewer>
     </Grid>

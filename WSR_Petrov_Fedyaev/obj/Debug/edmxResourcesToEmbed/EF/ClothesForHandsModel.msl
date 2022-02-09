@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ClothesInHand_Petrov_FedyaevModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="History">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.History">
+        <MappingFragment StoreEntitySet="History">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="IDMaterial" ColumnName="IDMaterial" />
+          <ScalarProperty Name="QtyBefore" ColumnName="QtyBefore" />
+          <ScalarProperty Name="QtyAfter" ColumnName="QtyAfter" />
+          <ScalarProperty Name="DateChange" ColumnName="DateChange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.Material">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameMaterial" ColumnName="NameMaterial" />
+          <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="QtyInPackage" ColumnName="QtyInPackage" />
+          <ScalarProperty Name="IDUnit" ColumnName="IDUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supplier">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameSupplier" ColumnName="NameSupplier" />
+          <ScalarProperty Name="IDTypeSupplier" ColumnName="IDTypeSupplier" />
+          <ScalarProperty Name="INN" ColumnName="INN" />
+          <ScalarProperty Name="RateQuality" ColumnName="RateQuality" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeMaterial">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.TypeMaterial">
+        <MappingFragment StoreEntitySet="TypeMaterial">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameTypeMaterial" ColumnName="NameTypeMaterial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeSupplier">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.TypeSupplier">
+        <MappingFragment StoreEntitySet="TypeSupplier">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameTypeSupplier" ColumnName="NameTypeSupplier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unit">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.Unit">
+        <MappingFragment StoreEntitySet="Unit">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameUnit" ColumnName="NameUnit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_MaterialDetails">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.VW_MaterialDetails">
+        <MappingFragment StoreEntitySet="VW_MaterialDetails">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NameTypeMaterial" ColumnName="NameTypeMaterial" />
+          <ScalarProperty Name="NameMaterial" ColumnName="NameMaterial" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="COUNSUPPLIER" ColumnName="COUNSUPPLIER" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="QtyAfter" ColumnName="QtyAfter" />
+          <ScalarProperty Name="DateChange" ColumnName="DateChange" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VW_SupplierDetials">
+      <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.VW_SupplierDetials">
+        <MappingFragment StoreEntitySet="VW_SupplierDetials">
+          <ScalarProperty Name="Suppliers" ColumnName="Suppliers" />
+          <ScalarProperty Name="NameMaterial" ColumnName="NameMaterial" />
+          <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="MinQty" ColumnName="MinQty" />
+          <ScalarProperty Name="QtyInPackage" ColumnName="QtyInPackage" />
+          <ScalarProperty Name="IDUnit" ColumnName="IDUnit" />
+          <ScalarProperty Name="Discription" ColumnName="Discription" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MaterialSupplier" TypeName="ClothesInHand_Petrov_FedyaevModel.MaterialSupplier" StoreEntitySet="MaterialSupplier">
+      <EndProperty Name="Material">
+        <ScalarProperty Name="ID" ColumnName="IDMaterial" />
+      </EndProperty>
+      <EndProperty Name="Supplier">
+        <ScalarProperty Name="ID" ColumnName="IDSupplier" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище ClothesInHand_Petrov_FedyaevModel.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>
