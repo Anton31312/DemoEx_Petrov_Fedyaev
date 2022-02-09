@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f143ed1a66904b7c8ba7e7fc88deb1b5" Name="Diagram1">
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.History" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.Material" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.Supplier" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.TypeMaterial" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.TypeSupplier" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.Unit" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.VW_MaterialDetails" Width="1.5" PointX="2.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClothesInHand_Petrov_FedyaevModel.VW_SupplierDetials" Width="1.5" PointX="4.75" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="ClothesInHand_Petrov_FedyaevModel.FK_History_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="ClothesInHand_Petrov_FedyaevModel.FK_Material_TypeMaterial" ManuallyRouted="false" />
+        <AssociationConnector Association="ClothesInHand_Petrov_FedyaevModel.FK_Material_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="ClothesInHand_Petrov_FedyaevModel.FK_Supplier_TypeSupplier" ManuallyRouted="false" />
+        <AssociationConnector Association="ClothesInHand_Petrov_FedyaevModel.MaterialSupplier" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

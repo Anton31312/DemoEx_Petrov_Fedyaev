@@ -1,0 +1,53 @@
+﻿<Window x:Class="WSR_Petrov_Fedyaev.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSR_Petrov_Fedyaev"
+        mc:Ignorable="d"
+        Title="Админ панель Одежда для ручек" 
+        Height="700" 
+        Width="900"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Resources\ClothesHand.ico">
+  
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Background="#B3F4E9" 
+                    Grid.Row="0"  Orientation="Horizontal"
+                    >
+            <Image Source="/Resources\ClothesHand.png" Margin="10 0 0 0"
+                   Height="55"/>
+            <TextBlock Text="Одежда для ручек"
+                       VerticalAlignment="Center"
+                       Margin="10 0 0 0" FontFamily="Candara"
+                       FontSize="30" Foreground="#FFFFFF"/>
+            <Button x:Name="btnBack" 
+                    Width="150"   Height="30"
+                    FontSize="17" FontFamily="Candara"
+                    Background="#A5E887" Content="Назад"
+                    Foreground="#ffffff"  VerticalAlignment="Center"
+                    Margin="250 0 0 0" Click="btnBack_Click"/>
+            <Button x:Name="btnFAQ" 
+                    Width="150"   Height="30"
+                    FontSize="17" FontFamily="Candara"
+                    Background="#A5E887" Content="FAQ"
+                    Foreground="#ffffff"  VerticalAlignment="Center"
+                    Margin="15 0 0 0" Click="btnFAQ_Click"/>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                    VerticalAlignment="Center">
+            <Image Source="/Resources\ClothesHand.png"
+                   Height="490"
+                   Opacity="0.4"/>
+        </StackPanel>
+        <Frame x:Name="frmMain" 
+               Grid.Row="1" 
+               NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
