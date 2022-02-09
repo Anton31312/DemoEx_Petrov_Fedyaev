@@ -24,8 +24,9 @@ namespace WSR_Petrov_Fedyaev.Pages
     public partial class MaterialPage : Page
     {
         List<Material> materialList = new List<Material>();
-        List<string> listSort = new List<string>() { "Сортировка", "По убыванию", "По возрастанию"};
-        List<string> listFilter = new List<string>() { "Фильтрация", "По наименованию", "По стоимости", "По остатку на складе"};
+        List<string> listSort = new List<string>() { "Сортировка", "Наименование по возрастанию", "Наименование по убыванию", "Остаток по возрастанию", "Остаток по убыванию", 
+                                                     "Стоимость по возрастанию", "Стоимость по убыванию"};
+        List<string> listFilter = new List<string>() { "Фильтрация", "Краска", "Резина", "Силикон" };
 
         public MaterialPage()
         {
@@ -43,57 +44,56 @@ namespace WSR_Petrov_Fedyaev.Pages
         {
             materialList = AppData.entities.Material.ToList();
             materialList = materialList.
-                            Where(i => i.NameMaterial.ToLower().Contains(TextBoxSearch.Text.ToLower()) ||
-                            i.Cost.ToString().Contains(TextBoxSearch.Text.ToLower()) ||
-                            i.Qty.ToString().Contains(TextBoxSearch.Text.ToLower())).ToList();
+                            Where(i => i.NameMaterial.ToLower().Contains(TextBoxSearch.Text.ToLower())).ToList();
 
-
-            if (SortComboBox.SelectedIndex == 1)
+            switch (FilterComboBox.SelectedIndex)
             {
-                switch (FilterComboBox.SelectedIndex)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        materialList = materialList.OrderByDescending(i => i.NameMaterial).ToList();
-                        break;
-                    case 2:
-                        materialList = materialList.OrderByDescending(i => i.Cost).ToList();
-                        break;
-                    case 3:
-                        materialList = materialList.OrderByDescending(i => i.Qty).ToList();
-                        break;
-
-                    default:
-                        materialList = materialList.OrderByDescending(i => i.NameMaterial).ToList();
-                        break;
-                }
+                case 0:
+                    materialList = materialList.OrderBy(i => i.ID).ToList();
+                    break;
+                case 1:
+                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(2)).ToList();
+                    break;
+                case 2:
+                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(1)).ToList();
+                    break;
+                case 3:
+                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(3)).ToList();
+                    break;
+                default:
+                    materialList = materialList.OrderBy(i => i.ID).ToList();
+                    break;
             }
-            else
-            {
-                switch (FilterComboBox.SelectedIndex)
-                {
-                    case 0:
-                        break;
-                    case 1:
-                        materialList = materialList.OrderBy(i => i.NameMaterial).ToList();
-                        break;
-                    case 2:
-                        materialList = materialList.OrderBy(i => i.Cost).ToList();
-                        break;
-                    case 3:
-                        materialList = materialList.OrderBy(i => i.Qty).ToList();
-                        break;
 
-                    default:
-                        materialList = materialList.OrderBy(i => i.NameMaterial).ToList();
-                        break;
-                }
+            switch (SortComboBox.SelectedIndex)
+            {
+                case 0:
+                    materialList = materialList.OrderBy(i => i.ID).ToList();
+                    break;
+                case 1:
+                    materialList = materialList.OrderBy(i => i.NameMaterial).ToList();
+                    break;
+                case 2:
+                    materialList = materialList.OrderByDescending(i => i.NameMaterial).ToList();
+                    break;
+                case 3:
+                    materialList = materialList.OrderBy(i => i.Qty).ToList();
+                    break;
+                case 4:
+                    materialList = materialList.OrderByDescending(i => i.Qty).ToList();
+                    break;
+                case 5:
+                    materialList = materialList.OrderBy(i => i.Cost).ToList();
+                    break;
+                case 6:
+                    materialList = materialList.OrderByDescending(i => i.Cost).ToList();
+                    break;
+                default:
+                    materialList = materialList.OrderBy(i => i.ID).ToList();
+                    break;
             }
             MaterialListView.ItemsSource = materialList;
         }
-
-
 
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -107,6 +107,11 @@ namespace WSR_Petrov_Fedyaev.Pages
         }
 
         private void TxtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Filter();
+        }
+
+        private void FilterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Filter();
         }

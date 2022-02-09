@@ -27,7 +27,8 @@
                     <ComboBox x:Name="FilterComboBox"
                               Height="20"
                               Width="150"
-                              Margin="20 10 0 0"/>
+                              Margin="20 10 0 0"
+                              SelectionChanged="FilterComboBox_SelectionChanged"/>
                 </StackPanel>
 
                 <ListView x:Name="MaterialListView"
@@ -70,7 +71,6 @@
                                            x:Name="NameMaterialTextBlock"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"/>
-
 
                                 <TextBlock Text="{Binding MinQty, StringFormat='{} Минимальное количество: {0} шт'}"
                                            x:Name="MinQtyTextBlock"
