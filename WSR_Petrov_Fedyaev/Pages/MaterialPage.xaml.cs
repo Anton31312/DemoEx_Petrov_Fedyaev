@@ -31,10 +31,10 @@ namespace WSR_Petrov_Fedyaev.Pages
         {
             InitializeComponent();
 
-            ComboBoxSort.ItemsSource = listSort;
-            ComboBoxSort.SelectedIndex = 0;         
-            ComboBoxFilter.ItemsSource = listFilter;
-            ComboBoxFilter.SelectedIndex = 0;
+            SortComboBox.ItemsSource = listSort;
+            SortComboBox.SelectedIndex = 0;         
+            FilterComboBox.ItemsSource = listFilter;
+            FilterComboBox.SelectedIndex = 0;
 
             Filter();
         }
@@ -48,9 +48,9 @@ namespace WSR_Petrov_Fedyaev.Pages
                             i.Qty.ToString().Contains(TextBoxSearch.Text.ToLower())).ToList();
 
 
-            if (ComboBoxSort.SelectedIndex == 1)
+            if (SortComboBox.SelectedIndex == 1)
             {
-                switch (ComboBoxFilter.SelectedIndex)
+                switch (FilterComboBox.SelectedIndex)
                 {
                     case 0:
                         break;
@@ -71,7 +71,7 @@ namespace WSR_Petrov_Fedyaev.Pages
             }
             else
             {
-                switch (ComboBoxFilter.SelectedIndex)
+                switch (FilterComboBox.SelectedIndex)
                 {
                     case 0:
                         break;
@@ -90,7 +90,7 @@ namespace WSR_Petrov_Fedyaev.Pages
                         break;
                 }
             }
-            ListViewMaterial.ItemsSource = materialList;
+            MaterialListView.ItemsSource = materialList;
         }
 
 
