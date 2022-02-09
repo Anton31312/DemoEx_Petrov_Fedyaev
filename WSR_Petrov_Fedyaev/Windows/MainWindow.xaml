@@ -8,8 +8,7 @@
         Title="Админ панель Одежда для ручек" 
         Height="700" 
         Width="900"
-        WindowStartupLocation="CenterScreen"
-        Icon="/Resources\ClothesHand.ico">
+        WindowStartupLocation="CenterScreen">
   
     <Grid>
         <Grid.RowDefinitions>

@@ -32,7 +32,7 @@ namespace WSR_Petrov_Fedyaev.Pages
             InitializeComponent();
 
             cmbSort.ItemsSource = listSort;
-            cmbSort.SelectedIndex = 0;            
+            cmbSort.SelectedIndex = 0;         
             cmbFilter.ItemsSource = listFilter;
             cmbFilter.SelectedIndex = 0;
 
@@ -41,26 +41,14 @@ namespace WSR_Petrov_Fedyaev.Pages
 
         private void Filter()
         {
-            bool flag;
             materialList = AppData.entities.VW_SupplierDetials.ToList();
             materialList = materialList.
                             Where(i => i.NameMaterial.ToLower().Contains(txtSearch.Text.ToLower()) ||
                             i.Cost.ToString().Contains(txtSearch.Text.ToLower()) ||
                             i.Qty.ToString().Contains(txtSearch.Text.ToLower())).ToList();
 
-            switch(cmbSort.SelectedIndex)
-            {
-                case 0:
-                    break;
-                case 1:
-                    flag = true;
-                    break;
-                case 2:
-                    flag = false;
-                    break;
-            }
 
-            if (flag = true)
+            if (cmbSort.SelectedIndex == 1)
             {
                 switch (cmbFilter.SelectedIndex)
                 {
