@@ -10,21 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WSR_Petrov_Fedyaev.EF;
 using WSR_Petrov_Fedyaev.ClassHelper;
+using WSR_Petrov_Fedyaev.EF;
 
-namespace WSR_Petrov_Fedyaev.Pages
+namespace WSR_Petrov_Fedyaev.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для EditMaterialPage.xaml
+    /// Логика взаимодействия для EditMaterialWindowWindow.xaml
     /// </summary>
-    public partial class EditMaterialPage : Page
+    public partial class EditMaterialWindowWindow : Window
     {
-        public EditMaterialPage(Material material)
+        public EditMaterialWindowWindow()
         {
             InitializeComponent();
+
             Material material1 = new Material();
             cmbTypeMaterial.SelectedIndex = material1.IDTypeMaterial - 1;
             cmbTypeMaterial.SelectedValuePath = "ID";
@@ -45,7 +45,6 @@ namespace WSR_Petrov_Fedyaev.Pages
             txtQtyMin.Text = material1.MinQty.ToString();
             txtQtyInPackage.Text = material1.QtyInPackage.ToString();
             txtDiscription.Text = material1.Description;
-
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -89,13 +88,13 @@ namespace WSR_Petrov_Fedyaev.Pages
                 }
                 AppData.entities.SaveChanges();
                 MessageBox.Show("Данные успешно изменены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
-                FrameClass.frameMain.Navigate(new MaterialPage());
+                this.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-            
+
         }
     }
 }

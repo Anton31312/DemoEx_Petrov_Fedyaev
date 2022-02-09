@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using WSR_Petrov_Fedyaev.ClassHelper;
 using WSR_Petrov_Fedyaev.EF;
+using WSR_Petrov_Fedyaev.Windows;
 
 namespace WSR_Petrov_Fedyaev.Pages
 {
@@ -38,6 +39,14 @@ namespace WSR_Petrov_Fedyaev.Pages
             FilterComboBox.SelectedIndex = 0;
 
             Filter();
+
+
+        }
+
+        private void CheckQty()
+        {
+           materialList = AppData.entities.Material.ToList();
+
         }
 
         private void Filter()
@@ -98,7 +107,11 @@ namespace WSR_Petrov_Fedyaev.Pages
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
         {
-            FrameClass.frameMain.Navigate(new EditMaterialPage((sender as Button).DataContext as Material));
+            //FrameClass.frameMain.Navigate(new EditMaterialPage((sender as Button).DataContext as Material));
+            EditMaterialWindowWindow editMaterialWindow = new EditMaterialWindowWindow();
+            this.Opacity = 0.4;
+            editMaterialWindow.ShowDialog();
+            this.Opacity = 1;
         }
 
         private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)

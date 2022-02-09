@@ -78,7 +78,7 @@
                                            Grid.Column="1"
                                            Grid.Row="1"/>
 
-                                <TextBlock Text="{Binding Supplier.NameSupplier, StringFormat='{} Поставщики: {}'}" 
+                                <TextBlock Text="{Binding Supplier, StringFormat='{} Поставщики: {}'}" 
                                            x:Name="SupplierTextBlock"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
