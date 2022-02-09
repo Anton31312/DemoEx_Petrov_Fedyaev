@@ -70,10 +70,8 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\EntityFra
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\EntityFramework.xml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.csproj.AssemblyReference.cache
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\AddMaterialPage.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\EditMaterialPage.g.cs
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MainPage.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MaterialPage.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\MainWindow.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\App.g.cs
@@ -83,7 +81,6 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petro
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\App.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\AddMaterialPage.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\EditMaterialPage.baml
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MainPage.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MaterialPage.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\MainWindow.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.g.resources

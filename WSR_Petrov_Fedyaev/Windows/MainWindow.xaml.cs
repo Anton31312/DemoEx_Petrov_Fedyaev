@@ -29,7 +29,7 @@ namespace WSR_Petrov_Fedyaev
             AppData.entities = new EF.Entities();
             FrameClass.frameMain = frmMain;
 
-            frmMain.Navigate(new MainPage());
+            frmMain.Navigate(new MaterialPage());
         }
 
         private void btnFAQ_Click(object sender, RoutedEventArgs e)

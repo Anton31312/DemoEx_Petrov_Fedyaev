@@ -54,7 +54,8 @@
                                            Text="{Binding Image}"
                                            Grid.Column="0"
                                            Grid.RowSpan="3"/>
-
+                                
+                                
                                 <Image Source="{Binding Text, ElementName=PathImage}"
                                        Style="{DynamicResource ImageSource}"
                                        Grid.Column="0"
