@@ -20,7 +20,7 @@ namespace WSR_Petrov_Fedyaev.EF
             this.History = new HashSet<History>();
             this.Supplier = new HashSet<Supplier>();
         }
-    
+
         public int ID { get; set; }
         public string NameMaterial { get; set; }
         public int IDTypeMaterial { get; set; }

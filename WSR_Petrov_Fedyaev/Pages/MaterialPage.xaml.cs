@@ -23,7 +23,7 @@ namespace WSR_Petrov_Fedyaev.Pages
     /// </summary>
     public partial class MaterialPage : Page
     {
-        List<VW_SupplierDetials> materialList = new List<VW_SupplierDetials>();
+        List<Material> materialList = new List<Material>();
         List<string> listSort = new List<string>() { "Сортировка", "По убыванию", "По возрастанию"};
         List<string> listFilter = new List<string>() { "Фильтрация", "По наименованию", "По стоимости", "По остатку на складе"};
 
@@ -31,26 +31,26 @@ namespace WSR_Petrov_Fedyaev.Pages
         {
             InitializeComponent();
 
-            cmbSort.ItemsSource = listSort;
-            cmbSort.SelectedIndex = 0;         
-            cmbFilter.ItemsSource = listFilter;
-            cmbFilter.SelectedIndex = 0;
+            ComboBoxSort.ItemsSource = listSort;
+            ComboBoxSort.SelectedIndex = 0;         
+            ComboBoxFilter.ItemsSource = listFilter;
+            ComboBoxFilter.SelectedIndex = 0;
 
             Filter();
         }
 
         private void Filter()
         {
-            materialList = AppData.entities.VW_SupplierDetials.ToList();
+            materialList = AppData.entities.Material.ToList();
             materialList = materialList.
-                            Where(i => i.NameMaterial.ToLower().Contains(txtSearch.Text.ToLower()) ||
-                            i.Cost.ToString().Contains(txtSearch.Text.ToLower()) ||
-                            i.Qty.ToString().Contains(txtSearch.Text.ToLower())).ToList();
+                            Where(i => i.NameMaterial.ToLower().Contains(TextBoxSearch.Text.ToLower()) ||
+                            i.Cost.ToString().Contains(TextBoxSearch.Text.ToLower()) ||
+                            i.Qty.ToString().Contains(TextBoxSearch.Text.ToLower())).ToList();
 
 
-            if (cmbSort.SelectedIndex == 1)
+            if (ComboBoxSort.SelectedIndex == 1)
             {
-                switch (cmbFilter.SelectedIndex)
+                switch (ComboBoxFilter.SelectedIndex)
                 {
                     case 0:
                         break;
@@ -71,7 +71,7 @@ namespace WSR_Petrov_Fedyaev.Pages
             }
             else
             {
-                switch (cmbFilter.SelectedIndex)
+                switch (ComboBoxFilter.SelectedIndex)
                 {
                     case 0:
                         break;
@@ -90,9 +90,7 @@ namespace WSR_Petrov_Fedyaev.Pages
                         break;
                 }
             }
-
-
-            listMaterial.ItemsSource = materialList;
+            ListViewMaterial.ItemsSource = materialList;
         }
 
 

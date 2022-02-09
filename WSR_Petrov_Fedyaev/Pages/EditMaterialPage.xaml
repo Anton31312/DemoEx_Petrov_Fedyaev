@@ -199,7 +199,6 @@
                 Grid.ColumnSpan="4"
                 Height="30"
                 Width="200"
-                Style="{DynamicResource StyleBtnMain}"
                 Content="Редактиовать"
                 FontSize="20"
                 Click="btnEdit_Click"/>

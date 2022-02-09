@@ -100,6 +100,7 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\MaterialClass.cs" />
+    <Compile Include="EF\MaterialExtension.cs" />
     <Compile Include="EF\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
