@@ -24,7 +24,7 @@ namespace WSR_Petrov_Fedyaev
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Material> materialList = new List<Material>();
+        List<VW_SupplierDetials> materialList = new List<VW_SupplierDetials>();
         List<string> listSort = new List<string>() { "Сортировка", "Наименование по возрастанию", "Наименование по убыванию", "Остаток по возрастанию", "Остаток по убыванию",
                                                      "Стоимость по возрастанию", "Стоимость по убыванию"};
         List<string> listFilter = new List<string>() { "Фильтрация", "Краска", "Резина", "Силикон" };
@@ -42,7 +42,7 @@ namespace WSR_Petrov_Fedyaev
 
         private void Filter()
         {
-            materialList = AppData.entities.Material.ToList();
+            materialList = AppData.entities.VW_SupplierDetials.ToList();
             materialList = materialList.
                             Where(i => i.NameMaterial.ToLower().Contains(TextBoxSearch.Text.ToLower())).ToList();
 
@@ -52,13 +52,13 @@ namespace WSR_Petrov_Fedyaev
                     materialList = materialList.OrderBy(i => i.ID).ToList();
                     break;
                 case 1:
-                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(2)).ToList();
+                    materialList = materialList.Where(i => i.IDTypeMaterial.Equals(2)).ToList();
                     break;
                 case 2:
-                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(1)).ToList();
+                    materialList = materialList.Where(i => i.IDTypeMaterial.Equals(1)).ToList();
                     break;
                 case 3:
-                    materialList = materialList.Where(i => i.TypeMaterial.ID.Equals(3)).ToList();
+                    materialList = materialList.Where(i => i.IDTypeMaterial.Equals(3)).ToList();
                     break;
                 default:
                     materialList = materialList.OrderBy(i => i.ID).ToList();

@@ -54,12 +54,14 @@
                              Height="20"
                              Width="300"
                              Margin="100 10 0 0"
+                             VerticalContentAlignment="Center"
                              TextChanged="TextBoxSearch_TextChanged"/>
 
                     <ComboBox x:Name="SortComboBox"
                               Height="20"
                               Width="200"
                               Margin="20 10 0 0"
+                              VerticalContentAlignment="Center"
                               SelectionChanged="SortComboBox_SelectionChanged"/>
 
                     <ComboBox x:Name="FilterComboBox"
@@ -101,27 +103,36 @@
                                        Grid.RowSpan="3"/>
 
                                 <!--Column Second-->
-                                <TextBlock Text="{Binding TypeMaterial.NameTypeMaterial, StringFormat='{} | {}'}"
+                                <StackPanel Orientation="Horizontal"
+                                            Grid.Column="1">
+                                    <TextBlock Text="{Binding NameTypeMaterial}"
                                            x:Name="NameTypeMaterialTextBlock"
-                                           Style="{DynamicResource StyleListView}"
-                                           Grid.Column="1"/>
-
-                                <TextBlock Text="{Binding NameMaterial}"
+                                           Style="{DynamicResource StyleListView}"/>
+                                    <TextBlock Text=" | "/>
+                                    <TextBlock Text="{Binding NameMaterial}"
                                            x:Name="NameMaterialTextBlock"
-                                           Style="{DynamicResource StyleListView}"
-                                           Grid.Column="1"/>
+                                           Style="{DynamicResource StyleListView}"/>
+                                </StackPanel>
+                                
 
-                                <TextBlock Text="{Binding MinQty, StringFormat='{} Минимальное количество: {0} шт'}"
+                                <TextBlock Text="{Binding MinQty, StringFormat='{}Минимальное количество: {0} шт'}"
                                            x:Name="MinQtyTextBlock"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
                                            Grid.Row="1"/>
 
-                                <TextBlock Text="{Binding Supplier.NameSupplier, StringFormat='{} Поставщики: {}'}" 
+                                <StackPanel Orientation="Horizontal"
+                                            Grid.Column="1"
+                                            Grid.Row="2">
+                                    <TextBlock Text="Поставщики: " 
+                                               Style="{DynamicResource StyleListView}"
+                                               FontWeight="Bold"/>
+
+                                    <TextBlock Text="{Binding Suppliers}" 
                                            x:Name="SupplierTextBlock"
-                                           Style="{DynamicResource StyleListView}"
-                                           Grid.Column="1"
-                                           Grid.Row="2"/>
+                                           Style="{DynamicResource StyleListView}"/>
+                                </StackPanel>
+                                
 
                                 <!--Column Third-->
                                 <TextBlock Text="{Binding Qty, StringFormat='{} Остаток: {0} шт'}"

@@ -16,7 +16,6 @@ namespace WSR_Petrov_Fedyaev.EF
     {
         public string Suppliers { get; set; }
         public string NameMaterial { get; set; }
-        public int IDTypeMaterial { get; set; }
         public string Image { get; set; }
         public decimal Cost { get; set; }
         public int Qty { get; set; }
@@ -25,5 +24,7 @@ namespace WSR_Petrov_Fedyaev.EF
         public int IDUnit { get; set; }
         public int ID { get; set; }
         public string Description { get; set; }
+        public string NameTypeMaterial { get; set; }
+        public int IDTypeMaterial { get; set; }
     }
 }

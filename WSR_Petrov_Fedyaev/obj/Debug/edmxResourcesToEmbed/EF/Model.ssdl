@@ -99,6 +99,7 @@
     <Key>
       <PropertyRef Name="NameMaterial" />
       <PropertyRef Name="IDTypeMaterial" />
+      <PropertyRef Name="NameTypeMaterial" />
       <PropertyRef Name="Cost" />
       <PropertyRef Name="Qty" />
       <PropertyRef Name="MinQty" />
@@ -109,6 +110,7 @@
     <Property Name="Suppliers" Type="nvarchar" MaxLength="4000" />
     <Property Name="NameMaterial" Type="nvarchar" MaxLength="100" Nullable="false" />
     <Property Name="IDTypeMaterial" Type="int" Nullable="false" />
+    <Property Name="NameTypeMaterial" Type="nvarchar" MaxLength="30" Nullable="false" />
     <Property Name="Image" Type="nvarchar(max)" />
     <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Qty" Type="int" Nullable="false" />
@@ -119,7 +121,9 @@
     <Property Name="ID" Type="int" Nullable="false" />
   </EntityType>
   <Association Name="FK_History_Material">
-    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="History" Type="Self.History" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Material">
@@ -155,7 +159,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_MaterialSupplier_Material">
-    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Role="MaterialSupplier" Type="Self.MaterialSupplier" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Material">
@@ -248,6 +254,7 @@
     [VW_SupplierDetials].[Suppliers] AS [Suppliers], 
     [VW_SupplierDetials].[NameMaterial] AS [NameMaterial], 
     [VW_SupplierDetials].[IDTypeMaterial] AS [IDTypeMaterial], 
+    [VW_SupplierDetials].[NameTypeMaterial] AS [NameTypeMaterial], 
     [VW_SupplierDetials].[Image] AS [Image], 
     [VW_SupplierDetials].[Cost] AS [Cost], 
     [VW_SupplierDetials].[Qty] AS [Qty], 

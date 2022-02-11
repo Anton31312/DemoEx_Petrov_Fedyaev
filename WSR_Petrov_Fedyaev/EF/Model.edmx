@@ -104,6 +104,7 @@
           <Key>
             <PropertyRef Name="NameMaterial" />
             <PropertyRef Name="IDTypeMaterial" />
+            <PropertyRef Name="NameTypeMaterial" />
             <PropertyRef Name="Cost" />
             <PropertyRef Name="Qty" />
             <PropertyRef Name="MinQty" />
@@ -114,6 +115,7 @@
           <Property Name="Suppliers" Type="nvarchar" MaxLength="4000" />
           <Property Name="NameMaterial" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="IDTypeMaterial" Type="int" Nullable="false" />
+          <Property Name="NameTypeMaterial" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="Image" Type="nvarchar(max)" />
           <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Qty" Type="int" Nullable="false" />
@@ -124,7 +126,9 @@
           <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_History_Material">
-          <End Role="Material" Type="Self.Material" Multiplicity="1" />
+          <End Role="Material" Type="Self.Material" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="History" Type="Self.History" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Material">
@@ -160,7 +164,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_MaterialSupplier_Material">
-          <End Role="Material" Type="Self.Material" Multiplicity="1" />
+          <End Role="Material" Type="Self.Material" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="MaterialSupplier" Type="Self.MaterialSupplier" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Material">
@@ -253,6 +259,7 @@
     [VW_SupplierDetials].[Suppliers] AS [Suppliers], 
     [VW_SupplierDetials].[NameMaterial] AS [NameMaterial], 
     [VW_SupplierDetials].[IDTypeMaterial] AS [IDTypeMaterial], 
+    [VW_SupplierDetials].[NameTypeMaterial] AS [NameTypeMaterial], 
     [VW_SupplierDetials].[Image] AS [Image], 
     [VW_SupplierDetials].[Cost] AS [Cost], 
     [VW_SupplierDetials].[Qty] AS [Qty], 
@@ -388,17 +395,17 @@
         <EntityType Name="VW_SupplierDetials">
           <Key>
             <PropertyRef Name="NameMaterial" />
-            <PropertyRef Name="IDTypeMaterial" />
             <PropertyRef Name="Cost" />
             <PropertyRef Name="Qty" />
             <PropertyRef Name="MinQty" />
             <PropertyRef Name="QtyInPackage" />
             <PropertyRef Name="IDUnit" />
             <PropertyRef Name="ID" />
+            <PropertyRef Name="NameTypeMaterial" />
+            <PropertyRef Name="IDTypeMaterial" />
           </Key>
           <Property Name="Suppliers" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
           <Property Name="NameMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="IDTypeMaterial" Type="Int32" Nullable="false" />
           <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="Qty" Type="Int32" Nullable="false" />
@@ -407,6 +414,8 @@
           <Property Name="IDUnit" Type="Int32" Nullable="false" />
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NameTypeMaterial" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="IDTypeMaterial" Type="Int32" Nullable="false" />
         </EntityType>
         <Association Name="FK_History_Material">
           <End Role="Material" Type="Self.Material" Multiplicity="1" />
@@ -630,10 +639,11 @@
           <EntitySetMapping Name="VW_SupplierDetials">
             <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.VW_SupplierDetials">
               <MappingFragment StoreEntitySet="VW_SupplierDetials">
+                <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
+                <ScalarProperty Name="NameTypeMaterial" ColumnName="NameTypeMaterial" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="Suppliers" ColumnName="Suppliers" />
                 <ScalarProperty Name="NameMaterial" ColumnName="NameMaterial" />
-                <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="Cost" ColumnName="Cost" />
                 <ScalarProperty Name="Qty" ColumnName="Qty" />

@@ -93,10 +93,11 @@
     <EntitySetMapping Name="VW_SupplierDetials">
       <EntityTypeMapping TypeName="ClothesInHand_Petrov_FedyaevModel.VW_SupplierDetials">
         <MappingFragment StoreEntitySet="VW_SupplierDetials">
+          <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
+          <ScalarProperty Name="NameTypeMaterial" ColumnName="NameTypeMaterial" />
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="Suppliers" ColumnName="Suppliers" />
           <ScalarProperty Name="NameMaterial" ColumnName="NameMaterial" />
-          <ScalarProperty Name="IDTypeMaterial" ColumnName="IDTypeMaterial" />
           <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="Cost" ColumnName="Cost" />
           <ScalarProperty Name="Qty" ColumnName="Qty" />

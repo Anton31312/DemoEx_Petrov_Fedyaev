@@ -96,17 +96,17 @@
   <EntityType Name="VW_SupplierDetials">
     <Key>
       <PropertyRef Name="NameMaterial" />
-      <PropertyRef Name="IDTypeMaterial" />
       <PropertyRef Name="Cost" />
       <PropertyRef Name="Qty" />
       <PropertyRef Name="MinQty" />
       <PropertyRef Name="QtyInPackage" />
       <PropertyRef Name="IDUnit" />
       <PropertyRef Name="ID" />
+      <PropertyRef Name="NameTypeMaterial" />
+      <PropertyRef Name="IDTypeMaterial" />
     </Key>
     <Property Name="Suppliers" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
     <Property Name="NameMaterial" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="IDTypeMaterial" Type="Int32" Nullable="false" />
     <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Cost" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Qty" Type="Int32" Nullable="false" />
@@ -115,6 +115,8 @@
     <Property Name="IDUnit" Type="Int32" Nullable="false" />
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NameTypeMaterial" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="IDTypeMaterial" Type="Int32" Nullable="false" />
   </EntityType>
   <Association Name="FK_History_Material">
     <End Role="Material" Type="Self.Material" Multiplicity="1" />
