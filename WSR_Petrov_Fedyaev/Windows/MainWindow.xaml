@@ -25,12 +25,12 @@
                        VerticalAlignment="Center"
                        Margin="10 0 0 0" FontFamily="Candara"
                        FontSize="30" Foreground="#FFFFFF"/>
-            <Button x:Name="btnBack" 
-                    Width="150"   Height="30"
+            <Button x:Name="AddMaterialButton" 
+                    Width="170"   Height="30"
                     FontSize="17" FontFamily="Candara"
-                    Background="#A5E887" Content="Назад"
+                    Background="#A5E887" Content="Добавить материал"
                     Foreground="#ffffff"  VerticalAlignment="Center"
-                    Margin="250 0 0 0" Click="btnBack_Click"/>
+                    Margin="230 0 0 0" Click="AddMaterialButton_Click"/>
             <Button x:Name="btnFAQ" 
                     Width="150"   Height="30"
                     FontSize="17" FontFamily="Candara"

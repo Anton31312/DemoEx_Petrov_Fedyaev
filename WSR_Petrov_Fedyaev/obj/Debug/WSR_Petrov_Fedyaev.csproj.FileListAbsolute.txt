@@ -71,7 +71,6 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\EntityFra
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\AddMaterialPage.g.cs
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\EditMaterialPage.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MaterialPage.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\MainWindow.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\App.g.cs
@@ -80,7 +79,6 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petro
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev_MarkupCompile.lref
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\App.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\AddMaterialPage.baml
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\EditMaterialPage.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Pages\MaterialPage.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\MainWindow.baml
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.g.resources
@@ -90,5 +88,5 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petro
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.csproj.CopyComplete
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.exe
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.pdb
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\EditMaterialWindow.g.cs
-C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\EditMaterialWindow.baml
+C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\AddEditMaterialWindow.g.cs
+C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\AddEditMaterialWindow.baml

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\App.xaml
-51055113662
+4875014340
 2787771596
-26-853248700
+25-834357947
 181817270232
-Pages\AddMaterialPage.xaml;Pages\EditMaterialPage.xaml;Pages\MaterialPage.xaml;Windows\EditMaterialWindow.xaml;Windows\MainWindow.xaml;
+Pages\AddMaterialPage.xaml;Pages\MaterialPage.xaml;Windows\AddEditMaterialWindow.xaml;Windows\MainWindow.xaml;
 
 False
 

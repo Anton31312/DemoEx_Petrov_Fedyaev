@@ -71,15 +71,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditMaterialPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\MaterialPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\EditMaterialWindow.xaml">
+    <Page Include="Windows\AddEditMaterialWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,14 +141,11 @@
     <Compile Include="Pages\AddMaterialPage.xaml.cs">
       <DependentUpon>AddMaterialPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditMaterialPage.xaml.cs">
-      <DependentUpon>EditMaterialPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\MaterialPage.xaml.cs">
       <DependentUpon>MaterialPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\EditMaterialWindow.xaml.cs">
-      <DependentUpon>EditMaterialWindow.xaml</DependentUpon>
+    <Compile Include="Windows\AddEditMaterialWindow.xaml.cs">
+      <DependentUpon>AddEditMaterialWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

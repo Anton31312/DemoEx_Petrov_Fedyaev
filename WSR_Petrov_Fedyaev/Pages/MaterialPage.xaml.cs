@@ -105,15 +105,6 @@ namespace WSR_Petrov_Fedyaev.Pages
         }
 
 
-        private void btnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            //FrameClass.frameMain.Navigate(new EditMaterialPage((sender as Button).DataContext as Material));
-            EditMaterialWindowWindow editMaterialWindow = new EditMaterialWindowWindow();
-            this.Opacity = 0.4;
-            editMaterialWindow.ShowDialog();
-            this.Opacity = 1;
-        }
-
         private void CmbSort_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Filter();
@@ -127,6 +118,15 @@ namespace WSR_Petrov_Fedyaev.Pages
         private void FilterComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Filter();
+        }
+
+        private void EditButton_Click(object sender, RoutedEventArgs e)
+        {
+            EF.Material material = new Material();
+            AddEditMaterialWindow addEditMaterialWindow = new AddEditMaterialWindow(material);
+            this.Opacity = 0.4;
+            addEditMaterialWindow.ShowDialog();
+            this.Opacity = 1;
         }
     }
 }

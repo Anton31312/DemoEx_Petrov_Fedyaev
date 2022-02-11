@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WSR_Petrov_Fedyaev.ClassHelper;
 using WSR_Petrov_Fedyaev.Pages;
+using WSR_Petrov_Fedyaev.Windows;
 
 
 namespace WSR_Petrov_Fedyaev
@@ -37,9 +38,13 @@ namespace WSR_Petrov_Fedyaev
 
         }
 
-        private void btnBack_Click(object sender, RoutedEventArgs e)
-        {
 
+        private void AddMaterialButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddEditMaterialWindow addEditMaterialWindow = new AddEditMaterialWindow();
+            this.Opacity = 0.4;
+            addEditMaterialWindow.ShowDialog();
+            this.Opacity = 1;
         }
     }
 }

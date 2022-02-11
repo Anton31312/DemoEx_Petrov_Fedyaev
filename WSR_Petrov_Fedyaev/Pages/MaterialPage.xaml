@@ -100,7 +100,8 @@
                                         Grid.Column="2"
                                         Grid.Row="2"
                                         VerticalAlignment="Center"
-                                        HorizontalAlignment="Right"/>
+                                        HorizontalAlignment="Right"
+                                        Click="EditButton_Click"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
