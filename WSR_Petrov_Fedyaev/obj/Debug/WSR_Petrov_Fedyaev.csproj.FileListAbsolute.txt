@@ -86,3 +86,4 @@ C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petro
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.pdb
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\AddEditMaterialWindow.g.cs
 C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\Windows\AddEditMaterialWindow.baml
+C:\Users\Anton\Desktop\WSR_Petrov_Fedyaev\WSR_Petrov_Fedyaev\obj\Debug\WSR_Petrov_Fedyaev.csproj.AssemblyReference.cache

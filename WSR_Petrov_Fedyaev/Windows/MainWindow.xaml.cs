@@ -106,6 +106,7 @@ namespace WSR_Petrov_Fedyaev
             AddEditMaterialWindow addEditMaterialWindow = new AddEditMaterialWindow();
             this.Opacity = 0.4;
             addEditMaterialWindow.ShowDialog();
+            Filter();
             this.Opacity = 1;
         }
 
@@ -127,7 +128,9 @@ namespace WSR_Petrov_Fedyaev
 
         }
 
-        private void EditButton_Click(object sender, RoutedEventArgs e)
+
+        //Edit material
+        private void MaterialListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             var editMaterial = new EF.Material();
 
@@ -140,7 +143,36 @@ namespace WSR_Petrov_Fedyaev
             this.Opacity = 0.4;
             addEditMaterialWindow.ShowDialog();
             MaterialListView.ItemsSource = AppData.entities.Material.ToList();
+            Filter();
             this.Opacity = 1;
+        }
+
+        //Delete material
+        private void MaterialListView_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete || e.Key == Key.Back)
+            {
+                if (MaterialListView.SelectedItem is EF.Material)
+                {
+                    try
+                    {
+                        var item = MaterialListView.SelectedItem as EF.Material;
+                       
+                        var resultClick = MessageBox.Show("Вы уверены?", "Подтвердите удаление", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (resultClick == MessageBoxResult.Yes)
+                        {
+                            AppData.entities.Material.Remove(item);
+                            AppData.entities.SaveChanges();
+                            MessageBox.Show("Материал успешно удален!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                            Filter();
+                        }
+                    }                 
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                    }
+                }
+            }
         }
     }
 }

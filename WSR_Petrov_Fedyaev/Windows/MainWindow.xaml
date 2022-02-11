@@ -70,8 +70,10 @@
                 </StackPanel>
 
                 <ListView x:Name="MaterialListView"
-                         Background="Transparent"
-                         BorderBrush="Transparent">
+                          Background="Transparent"
+                          BorderBrush="Transparent"
+                          MouseDoubleClick="MaterialListView_MouseDoubleClick"
+                          KeyUp="MaterialListView_KeyUp">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -130,16 +132,6 @@
                                            Grid.Row="0"
                                            HorizontalAlignment="Right"/>
 
-                                <Button x:Name="EditButton"
-                                        Content="Редактировать"
-                                        Height="20"
-                                        Width="100"
-                                        FontSize="15"
-                                        Grid.Column="2"
-                                        Grid.Row="2"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Right"
-                                        Click="EditButton_Click"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>

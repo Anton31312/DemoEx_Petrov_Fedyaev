@@ -104,35 +104,15 @@ namespace WSR_Petrov_Fedyaev.Windows
                 return;
             }
 
-            //Проверка на количество символов
             if (txtNameMaterial.Text.Length > 100)
             {
                 MessageBox.Show("В поле «Название материала» недопустимое количество символов", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            if (Convert.ToDecimal(txtCost.Text) > 0)
+            if (string.IsNullOrWhiteSpace(txtImage.Text))
             {
-                MessageBox.Show("В поле «Стоимость» цена должна быть больше 0", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            if (Convert.ToInt32(txtQtyInStorage.Text) > 0)
-            {
-                MessageBox.Show("В поле «Количество на складе» количество должно быть больше 0", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            if (Convert.ToInt32(txtQtyMin.Text) > 0)
-            {
-                MessageBox.Show("В поле «Минимальное количество» количество должно быть больше 0", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
-
-            if (Convert.ToInt32(txtQtyInPackage.Text) > 0)
-            {
-                MessageBox.Show("В поле «Количество в упаковке» количество должно быть больше 0", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                txtImage.Text = "/materials/picture.png";
             }
             #endregion
 
@@ -180,7 +160,7 @@ namespace WSR_Petrov_Fedyaev.Windows
 
                         AppData.entities.Material.Add(editMaterial);
                         AppData.entities.SaveChanges();
-                        MessageBox.Show("Пользователь успешно добавлен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Материал успешно добавлен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
                         this.Close();
                     }
                 }
