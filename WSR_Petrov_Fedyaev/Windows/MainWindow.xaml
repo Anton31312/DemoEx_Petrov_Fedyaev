@@ -88,7 +88,6 @@
                                     <RowDefinition Height="1*"/>
                                 </Grid.RowDefinitions>
 
-
                                 <!--Column First-->
                                 <TextBlock x:Name="PathImage" 
                                            Visibility="Hidden"
@@ -118,7 +117,7 @@
                                            Grid.Column="1"
                                            Grid.Row="1"/>
 
-                                <TextBlock Text="{Binding Supplier, StringFormat='{} Поставщики: {}'}" 
+                                <TextBlock Text="{Binding Supplier.NameSupplier, StringFormat='{} Поставщики: {}'}" 
                                            x:Name="SupplierTextBlock"
                                            Style="{DynamicResource StyleListView}"
                                            Grid.Column="1"
@@ -131,7 +130,6 @@
                                            Grid.Column="2"
                                            Grid.Row="0"
                                            HorizontalAlignment="Right"/>
-
                             </Grid>
                         </DataTemplate>
                     </ListView.ItemTemplate>
