@@ -174,5 +174,20 @@ namespace WSR_Petrov_Fedyaev
                 }
             }
         }
+
+        private void BackPageButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void NextPageButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Page_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
     }
 }
