@@ -40,7 +40,7 @@ namespace WSR_Petrov_Fedyaev.Windows
             isEdit = false;
         }
 
-        public AddEditMaterialWindow(Material material)
+        public AddEditMaterialWindow(EF.Material material)
         {
             InitializeComponent();
             //Completion ComboBox
@@ -57,15 +57,15 @@ namespace WSR_Petrov_Fedyaev.Windows
             //Passing values to fields
             editMaterial = material;
 
-            cmbTypeMaterial.SelectedIndex = material.IDTypeMaterial - 1;
-            cmbUnit.SelectedIndex = material.IDUnit - 1;
-            txtNameMaterial.Text = material.NameMaterial;
-            txtImage.Text = material.Image;
-            txtCost.Text = material.Cost.ToString();
-            txtQtyInStorage.Text = material.Qty.ToString();
-            txtQtyMin.Text = material.MinQty.ToString();
-            txtQtyInPackage.Text = material.QtyInPackage.ToString();
-            txtDiscription.Text = material.Description;
+            cmbTypeMaterial.SelectedIndex = editMaterial.IDTypeMaterial - 1;
+            cmbUnit.SelectedIndex = editMaterial.IDUnit - 1;
+            txtNameMaterial.Text = editMaterial.NameMaterial;
+            txtImage.Text = editMaterial.Image;
+            txtCost.Text = editMaterial.Cost.ToString();
+            txtQtyInStorage.Text = editMaterial.Qty.ToString();
+            txtQtyMin.Text = editMaterial.MinQty.ToString();
+            txtQtyInPackage.Text = editMaterial.QtyInPackage.ToString();
+            txtDiscription.Text = editMaterial.Description;
 
             isEdit = true;
         }

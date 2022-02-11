@@ -67,14 +67,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Pages\AddMaterialPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\MaterialPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Windows\AddEditMaterialWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,7 +80,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ClassHelper\AppData.cs" />
-    <Compile Include="ClassHelper\FrameClass.cs" />
     <Compile Include="EF\History.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -137,12 +128,6 @@
     </Compile>
     <Compile Include="EF\VW_SupplierDetials.cs">
       <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\AddMaterialPage.xaml.cs">
-      <DependentUpon>AddMaterialPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\MaterialPage.xaml.cs">
-      <DependentUpon>MaterialPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\AddEditMaterialWindow.xaml.cs">
       <DependentUpon>AddEditMaterialWindow.xaml</DependentUpon>
